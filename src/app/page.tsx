@@ -15,9 +15,9 @@ export default function Home() {
         </section>
 
         <section className="flex flex-col gap-2 text-sm/6 font-[family-name:var(--font-geist-mono)] text-left">
-          <h2 className="text-base sm:text-lg font-semibold">🔹 Set Grade</h2>
+          <h2 className="text-base sm:text-lg font-semibold">🔹 Working Grade</h2>
           <p className="text-gray-400">
-            Your <strong>Set Grade</strong> is the highest V-grade where you've sent at least <em>half that number</em> of problems (rounded up).
+            Your <strong>Working Grade</strong> is the highest V-grade where you've sent at least <em>half that number</em> of problems (rounded up). Example:
           </p>
 
           <table className="text-left text-xs sm:text-sm mt-2 border border-black/[0.08] dark:border-white/[0.12] rounded-md overflow-hidden">
@@ -42,14 +42,14 @@ export default function Home() {
           </table>
 
           <p className="text-xs italic text-gray-500 mt-2">
-            Example: 4 V7s = Set Grade V7. If you then send your fourth V8, your Set Grade becomes V8 from that moment onward.
+            Example: 4 V7s = Working Grade V7. If you then send your fourth V8, your Working Grade becomes V8 from that moment onward.
           </p>
         </section>
 
         <section className="flex flex-col gap-2 text-sm/6 font-[family-name:var(--font-geist-mono)] text-left">
           <h2 className="text-base sm:text-lg font-semibold">🔹 Scoring System</h2>
           <p className="text-gray-400">
-            Points are based on how a problem compares to your Set Grade:
+            Points are based on how a problem compares to your Working Grade:
           </p>
 
           <table className="text-left text-xs sm:text-sm mt-2 border border-black/[0.08] dark:border-white/[0.12] rounded-md overflow-hidden">
@@ -61,13 +61,13 @@ export default function Home() {
             </thead>
             <tbody>
               {[
-                ['Set Grade + 3', 175],
-                ['Set Grade + 2', 150],
-                ['Set Grade + 1', 125],
-                ['Set Grade', 100],
-                ['Set Grade - 1', 75],
-                ['Set Grade - 2', 50],
-                ['Set Grade - 3 or lower', 0],
+                ['Working Grade + 3', 175],
+                ['Working Grade + 2', 150],
+                ['Working Grade + 1', 125],
+                ['Working Grade', 100],
+                ['Working Grade - 1', 75],
+                ['Working Grade - 2', 50],
+                ['Working Grade - 3 or lower', 0],
               ].map(([label, score]) => (
                 <tr key={label} className="odd:bg-black even:bg-black/[0.02] dark:even:bg-white/[0.03]">
                   <td className="px-3 py-1.5 border-r border-gray-200 dark:border-white/[0.06]">{label}</td>
@@ -80,7 +80,7 @@ export default function Home() {
           <p className="text-xs text-gray-500 mt-2">
             <strong>Formula:</strong>{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded">
-              100 + 25 × (Problem Grade – Set Grade)
+              100 + 25 × (Problem Grade – Working Grade)
             </code>
           </p>
         </section>
@@ -96,10 +96,10 @@ export default function Home() {
         </section>
 
         <section className="flex flex-col gap-2 text-sm/6 font-[family-name:var(--font-geist-mono)] text-left">
-          <h2 className="text-base sm:text-lg font-semibold">🔹 Set Grade Behavior</h2>
+          <h2 className="text-base sm:text-lg font-semibold">🔹 Working Grade Behavior</h2>
           <ul className="list-disc list-inside text-gray-400">
-            <li><strong>Set Grade updates as soon as you hit the required send count.</strong></li>
-            <li>Only new climbs use the updated Set Grade.</li>
+            <li><strong>Working Grade updates as soon as you hit the required send count.</strong></li>
+            <li>Only new climbs use the updated Working Grade.</li>
             <li>Past sends keep the grade you had at the time of sending.</li>
             <li>(this way, you are incentivized to keep pushing difficulty- as holding back would kneecap you anyway)</li>
           </ul>
@@ -118,11 +118,11 @@ export default function Home() {
         <section className="flex flex-col gap-2 text-sm/6 font-[family-name:var(--font-geist-mono)] text-left">
           <h2 className="text-base sm:text-lg font-semibold">✅ Point Accrual Summary</h2>
           <ul className="list-disc list-inside text-gray-400">
-            <li><strong>Set Grade</strong> = highest V-grade with ≥ half that number of sends (rounded up).</li>
-            <li><strong>100 points</strong> for sending your Set Grade.</li>
+            <li><strong>Working Grade</strong> = highest V-grade with ≥ half that number of sends (rounded up).</li>
+            <li><strong>100 points</strong> for sending your Working Grade.</li>
             <li><strong>+25 / –25</strong> points for each grade above/below (to a min of 0).</li>
             <li><strong>+25 bonus</strong> for flashing.</li>
-            <li><strong>Set Grade adjusts as you progress,</strong> but previous scores remain fixed.</li>
+            <li><strong>Working Grade adjusts as you progress,</strong> but previous scores remain fixed.</li>
             <li><strong>No repeats</strong> / significantly overlapping boulders (point farming)</li>
           </ul>
         </section>
